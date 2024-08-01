@@ -17,6 +17,9 @@
             <div class="container">
                 <div class="logo">
                     <img src="images/Logo-Design.jpeg" alt="Webstore-logo" width="120px" height="50px">
+                    <div class="cartdesignlogo">
+                        <i class="fa-solid fa-cart-shopping"><p id="count">0</p></i>
+                    </div>
                 </div>
                 <div class="navbar">
                     <ul>
@@ -33,6 +36,7 @@
                     <a href=""><img src="images/cart_icon_crop.jpeg" alt="Cart-Logo" height="40px" width="40px" class="cartlogo" onclick="cart_item_page()"></a>  
                 </div>    
             </div>
+
         </nav>
     </head>
 
@@ -54,6 +58,20 @@
         </div>
 
         <button onclick="java_check()" align="left" class="btnjavascript">Click here to check Javascript</button>
+        <div class="containerrightbox">
+            <div class="containersidebar">
+                <div id="root"></div>
+                <div class="sidebar">
+                    <div class="head"><p>My Cart</p></div>
+                    <div id="cartitemsidebar">
+                        <class class="foot">
+                            <h3>Total</h3>
+                            <h2 id="total">$ 0.00</h2>
+                        </class>
+                    </div>
+                </div> 
+            </div>
+        </div>
         <div class="small-container">
             <h2>Products</h2>
             
@@ -72,135 +90,139 @@
                 </div>
             </div>
         </div>
+        <div class="containerbigbox">
+            <div class="containerleftbox">
+                <div class="small-container-2">
+                    <h2 class="title">Featured-Products</h2>
+                    <div class="featured-products">
+                        <div class="col_4">
+                            <img src="images/Basic_tshirt.jpeg" width="190px" height="258px" id="images/Basic_tshirt.jpeg">
+                            <h3>Basic T-Shirt Men</h3>
+                            <p>Rs-400</p>
+                            <button id="item_1" onclick="add_to_cart(id)">Add to Cart</button>
+                        </div>
+                        <div class="col_4">
+                            <img src="images/hawkins_tshirt.jpeg" width="190px" height="258px">
+                            <h3>Hawkins Basic T-Shirt</h3>
+                            <p>Rs-450</p>
+                            <button id="item_2" onclick="add_to_cart(id)">Add to Cart</button>
+                        </div>
+                        <div class="col_4">
+                            <img src="images/dunder_tshirt.webp" width="190px" height="258px">
+                            <h3>Dunder T-Shirt casual Men</h3>
+                            <p>Rs-440</p>
+                            <button id="item_3" onclick="add_to_cart(id)">Add to Cart</button>
+                        </div>
+                        <div class="col_4">
+                            <img src="images/v-Black_tshirt.webp" width="190px" height="258px">
+                            <h3>Black T-shirt casual Men</h3>
+                            <p>Rs-410</p>
+                            <button id="item_4" onclick="add_to_cart(id)">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="featured-products-2">
+                        <div class="col_4">
+                            <img src="images/hardik_tshirt1.1.jpeg" width="190px" height="258px">
+                            <h3>Hardik T-Shirt Blue</h3>
+                            <p>Rs-480</p>
+                            <button id="item_5" onclick="add_to_cart(id)">Add to Cart</button>
+                        </div>
+                        <div class="col_4">
+                            <img src="images/Hardik_tshirt02.jpg" width="190px" height="258px">
+                            <h3>Hardik T-Shirt Yellow</h3>
+                            <p>Rs-480</p>
+                            <button id="item_6" onclick="add_to_cart(id)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="small-container-2">
+                    <h2 class="title">Latest-Products</h2>
+                    <div class="featured-products">
+                        <div class="col_4">
+                            <img src="images/Basic_tshirt.jpeg" width="190px" height="258px">
+                            <h3>Basic T-Shirt Men</h3>
+                            <p>Rs-400</p>
+                            <button id="item_7" onclick="add_to_cart(id)">Add to Cart</button>
+                        </div>
+                        <div class="col_4">
+                            <img src="images/hawkins_tshirt.jpeg" width="190px" height="258px">
+                            <h3>Hawkins Basic T-Shirt</h3>
+                            <p>Rs-450</p>
+                            <button id="item_8" onclick="add_to_cart(id)">Add to Cart</button>
+                        </div>
+                        <div class="col_4">
+                            <img src="images/dunder_tshirt.webp" width="190px" height="258px">
+                            <h3>Dunder T-Shirt casual Men</h3>
+                            <p>Rs-440</p>
+                            <button id="item_9" onclick="add_to_cart(id)">Add to Cart</button>
+                        </div>
+                        <div class="col_4">
+                            <img src="images/v-Black_tshirt.webp" width="190px" height="258px">
+                            <h3>Black T-shirt casual Men</h3>
+                            <p>Rs-410</p>
+                            <button id="item_10" onclick="add_to_cart(id)">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="featured-products-2">
+                        <div class="col_4">
+                            <img src="images/hardik_tshirt1.1.jpeg" width="190px" height="258px">
+                            <h3>Hardik T-Shirt Blue</h3>
+                            <p>Rs-480</p>
+                            <button id="item_11" onclick="add_to_cart(id)">Add to Cart</button>
+                        </div>
+                        <div class="col_4">
+                            <img src="images/Hardik_tshirt02.jpg" width="190px" height="258px">
+                            <h3>Hardik T-Shirt Yellow</h3>
+                            <p>Rs-480</p>
+                            <button id="item_12" onclick="add_to_cart(id)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="featured-products">
+                    <div class="col_4">
+                        <img src="images/Basic_tshirt.jpeg" width="190px" height="258px">
+                        <h3>Basic T-Shirt Men</h3>
+                        <p>Rs-400</p>
+                        <button id="item_13" onclick="add_to_cart(id)">Add to Cart</button>
+                    </div>
+                    <div class="col_4">
+                        <img src="images/hawkins_tshirt.jpeg" width="190px" height="258px">
+                        <h3>Hawkins Basic T-Shirt</h3>
+                        <p>Rs-450</p>
+                        <button id="item_14" onclick="add_to_cart(id)">Add to Cart</button>
+                    </div>
+                    <div class="col_4">
+                        <img src="images/dunder_tshirt.webp" width="190px" height="258px">
+                        <h3>Dunder T-Shirt casual Men</h3>
+                        <p>Rs-440</p>
+                        <button id="item_15" onclick="add_to_cart(id)">Add to Cart</button>
+                    </div>
+                    <div class="col_4">
+                        <img src="images/v-Black_tshirt.webp" width="190px" height="258px">
+                        <h3>Black T-shirt casual Men</h3>
+                        <p>Rs-410</p>
+                        <button id="item_16" onclick="add_to_cart(id)">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="featured-products-2">
+                    <div class="col_4">
+                        <img src="images/hardik_tshirt1.1.jpeg" width="190px" height="258px">
+                        <h3>Hardik T-Shirt Blue</h3>
+                        <p>Rs-480</p>
+                        <button id="item_17" onclick="add_to_cart(id)">Add to Cart</button>
+                    </div>
+                    <div class="col_4">
+                        <img src="images/Hardik_tshirt02.jpg" width="190px" height="258px">
+                        <h3>Hardik T-Shirt Yellow</h3>
+                        <p>Rs-480</p>
+                        <button id="item_18" onclick="add_to_cart(id)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
         
+
+        </div>                
         
-        <div class="small-container-2">
-            <h2 class="title">Featured-Products</h2>
-            <div class="featured-products">
-                <div class="col_4">
-                    <img src="images/Basic_tshirt.jpeg" width="190px" height="258px" id="images/Basic_tshirt.jpeg">
-                    <h3>Basic T-Shirt Men</h3>
-                    <p>Rs-400</p>
-                    <button id="item_1" onclick="add_to_cart(id)">Add to Cart</button>
-                </div>
-                <div class="col_4">
-                    <img src="images/hawkins_tshirt.jpeg" width="190px" height="258px">
-                    <h3>Hawkins Basic T-Shirt</h3>
-                    <p>Rs-450</p>
-                    <button id="item_2" onclick="add_to_cart(id)">Add to Cart</button>
-                </div>
-                <div class="col_4">
-                    <img src="images/dunder_tshirt.webp" width="190px" height="258px">
-                    <h3>Dunder T-Shirt casual Men</h3>
-                    <p>Rs-440</p>
-                    <button id="item_3" onclick="add_to_cart(id)">Add to Cart</button>
-                </div>
-                <div class="col_4">
-                    <img src="images/v-Black_tshirt.webp" width="190px" height="258px">
-                    <h3>Black T-shirt casual Men</h3>
-                    <p>Rs-410</p>
-                    <button id="item_4" onclick="add_to_cart(id)">Add to Cart</button>
-                </div>
-            </div>
-            <div class="featured-products-2">
-                <div class="col_4">
-                    <img src="images/hardik_tshirt1.1.jpeg" width="190px" height="258px">
-                    <h3>Hardik T-Shirt Blue</h3>
-                    <p>Rs-480</p>
-                    <button id="item_5" onclick="add_to_cart(id)">Add to Cart</button>
-                </div>
-                <div class="col_4">
-                    <img src="images/Hardik_tshirt02.jpg" width="190px" height="258px">
-                    <h3>Hardik T-Shirt Yellow</h3>
-                    <p>Rs-480</p>
-                    <button id="item_6" onclick="add_to_cart(id)">Add to Cart</button>
-                </div>
-            </div>
-        </div>
-        <div class="small-container-2">
-            <h2 class="title">Latest-Products</h2>
-            <div class="featured-products">
-                <div class="col_4">
-                    <img src="images/Basic_tshirt.jpeg" width="190px" height="258px">
-                    <h3>Basic T-Shirt Men</h3>
-                    <p>Rs-400</p>
-                    <button id="item_7" onclick="add_to_cart(id)">Add to Cart</button>
-                </div>
-                <div class="col_4">
-                    <img src="images/hawkins_tshirt.jpeg" width="190px" height="258px">
-                    <h3>Hawkins Basic T-Shirt</h3>
-                    <p>Rs-450</p>
-                    <button id="item_8" onclick="add_to_cart(id)">Add to Cart</button>
-                </div>
-                <div class="col_4">
-                    <img src="images/dunder_tshirt.webp" width="190px" height="258px">
-                    <h3>Dunder T-Shirt casual Men</h3>
-                    <p>Rs-440</p>
-                    <button id="item_9" onclick="add_to_cart(id)">Add to Cart</button>
-                </div>
-                <div class="col_4">
-                    <img src="images/v-Black_tshirt.webp" width="190px" height="258px">
-                    <h3>Black T-shirt casual Men</h3>
-                    <p>Rs-410</p>
-                    <button id="item_10" onclick="add_to_cart(id)">Add to Cart</button>
-                </div>
-            </div>
-            <div class="featured-products-2">
-                <div class="col_4">
-                    <img src="images/hardik_tshirt1.1.jpeg" width="190px" height="258px">
-                    <h3>Hardik T-Shirt Blue</h3>
-                    <p>Rs-480</p>
-                    <button id="item_11" onclick="add_to_cart(id)">Add to Cart</button>
-                </div>
-                <div class="col_4">
-                    <img src="images/Hardik_tshirt02.jpg" width="190px" height="258px">
-                    <h3>Hardik T-Shirt Yellow</h3>
-                    <p>Rs-480</p>
-                    <button id="item_12" onclick="add_to_cart(id)">Add to Cart</button>
-                </div>
-            </div>
-        </div>
-        <div class="featured-products">
-            <div class="col_4">
-                <img src="images/Basic_tshirt.jpeg" width="190px" height="258px">
-                <h3>Basic T-Shirt Men</h3>
-                <p>Rs-400</p>
-                <button id="item_13" onclick="add_to_cart(id)">Add to Cart</button>
-            </div>
-            <div class="col_4">
-                <img src="images/hawkins_tshirt.jpeg" width="190px" height="258px">
-                <h3>Hawkins Basic T-Shirt</h3>
-                <p>Rs-450</p>
-                <button id="item_14" onclick="add_to_cart(id)">Add to Cart</button>
-            </div>
-            <div class="col_4">
-                <img src="images/dunder_tshirt.webp" width="190px" height="258px">
-                <h3>Dunder T-Shirt casual Men</h3>
-                <p>Rs-440</p>
-                <button id="item_15" onclick="add_to_cart(id)">Add to Cart</button>
-            </div>
-            <div class="col_4">
-                <img src="images/v-Black_tshirt.webp" width="190px" height="258px">
-                <h3>Black T-shirt casual Men</h3>
-                <p>Rs-410</p>
-                <button id="item_16" onclick="add_to_cart(id)">Add to Cart</button>
-            </div>
-        </div>
-        <div class="featured-products-2">
-            <div class="col_4">
-                <img src="images/hardik_tshirt1.1.jpeg" width="190px" height="258px">
-                <h3>Hardik T-Shirt Blue</h3>
-                <p>Rs-480</p>
-                <button id="item_17" onclick="add_to_cart(id)">Add to Cart</button>
-            </div>
-            <div class="col_4">
-                <img src="images/Hardik_tshirt02.jpg" width="190px" height="258px">
-                <h3>Hardik T-Shirt Yellow</h3>
-                <p>Rs-480</p>
-                <button id="item_18" onclick="add_to_cart(id)">Add to Cart</button>
-            </div>
-        </div>
-    </div>
                                                                                                                  
         <div class="offer">
             <h2>Today's Offer</h2>
