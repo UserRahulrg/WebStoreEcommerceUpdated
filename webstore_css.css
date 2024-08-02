@@ -8,6 +8,7 @@ nav{
     padding: 0px 30px;
 }
 
+
 .container{
     
     width: inherit;
@@ -85,6 +86,8 @@ button:hover{
 
 .containerbigbox{
     display: flex;
+    flex-wrap: wrap-reverse;
+    flex-grow: inherit;
     align-content: space-evenly;
     width: 100%;
     height: fit-content;
@@ -98,12 +101,20 @@ button:hover{
 }
 
 .containerrightbox{
-    width: 46%;
-    height: 100%;
+    margin-top: 40%;
+
+    width: 36%;
+    height: 25%;
     top: 10px;
-    position:sticky;
+    position: fixed;
+    bottom: 25%;
     margin-left: 54%;
     
+}
+
+#mycart{
+    font-size: 24px;
+    font-weight: 700;
 }
 
 .container{
@@ -135,7 +146,8 @@ button:hover{
     width: 100%;
     height: 100%;
     border-radius: 5px;
-    background-color: lightblue;
+    background-color: rgba(173, 216, 230, 0.734);
+    
     margin-left: 20px;
     padding: 15px;
     text-align: center;
@@ -149,22 +161,27 @@ button:hover{
 
 .row{
     display: flex;
-    align-items: inherit;
+    flex-wrap: nowrap;
     justify-content: space-around;
     font-style: italic;
-    font-size: x-large;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: peachpuff
 }
 
 .row_2{
+    display: flex;
+    flex-wrap: nowrap;
     background-color: peachpuff;
     display: flex;
-    width: 100%;
+    width: 90%;
+    height: fit-content;
+    
 }
 
 .row-9{
     display: flex;
+    width: 100%;
+    height: fit-content;
 }
 
 
@@ -183,6 +200,8 @@ button:hover{
 }
 
 .col-2{
+    width: 100%;
+    height: fit-content;
     flex-basis: 140%;
     min-width: 320px;
     padding: 8px;
@@ -198,21 +217,24 @@ button:hover{
 }
 
 .col-5{
-    flex-basis: 140%;
+   
     min-width: 320px;
     padding: 8px;
     float: right;
-    padding-left: 16%;
+    padding-left: 6%;
     padding-top: 2px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
     
 }
 
-.col-5 img{
-    max-width: 150%;
-    padding: 16px 10px 16px ;
-    padding-left: 20px;
-    float: left;
+.watchimage{
+    width: 90%;
+    height: 400px;
+    background-image: url('./images/samsung_watch_4.png');
+    background-color: black;
+    background-repeat: no-repeat;
+    backface-visibility: visible;
 }
 
 .col-3 {
@@ -247,11 +269,30 @@ button:hover{
     background-color: rgb(182, 235, 182);
 }
 
+.testimonial{
+    width: 100%;
+    height: fit-content;
+}
+
+.offers{
+    width: 100%;
+    height: fit-content;
+}
+
+.offer{
+    width: 100%;
+    height: fit-content;
+}
+
+
+
 .col-7{
-    width: 70%;
-    font-size: 21px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    padding: 40px 180px 20px;
+    width: 100%;
+    font-size: 18px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: auto;
+    font-style: italic;
+    font-weight: 570;
     
 }
 
@@ -262,6 +303,10 @@ button:hover{
 .col-8{
     width: 50%;
     font-size: 21px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: auto;
+    font-style: italic;
+    font-weight: 700;
     
 }
 
@@ -272,6 +317,33 @@ button:hover{
 .col-8 img{
     border-radius: 50%;
 }   
+
+.col-11{
+    background-image: url('./images/adidas-Tshirt.jpg');
+    width: 40%;
+    height: 440px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+
+.col-12{
+    background-image: url('./images/adidas-National-2.0-Black-Backpack-_342449-front-US.webp');
+    width: 40%;
+    height: 440px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+}
+
+.col-13{
+    background-image: url('./images/adidas-men-ice-dive-edt-100-ml_2_display_1472908060_c6f1cbe5.webp');
+    width: 40%;
+    height: 440px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+}
 
 .btn-explore{
     display: inline-block;
@@ -320,10 +392,12 @@ header{
 .row-12{
     font-size: 18px;
     display: flex;
+    width: 100%;
+    height: fit-content;
 }
 
 .footer-col-1{
-    padding: 20px 40px 20px;
+    padding: 1% 1% 1% 1%;
     font-style: 38px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 
@@ -338,21 +412,24 @@ ul{
 }
 
 .categories{
-    margin: 10px 0;
+    width: 100%;
+    height: fit-content;
+    margin: 4%;
     margin-bottom: 20px;
     
     padding-left: 0px;
     background-color: inherit;
     padding-top: 10px;
     padding-bottom: 40px;
-    
+
 }
 
 
 .small-container{
     max-width: 100%;
+    height: fit-content;
     margin: auto;
-    padding-left: 25px;
+    padding-left: 5%;
     background-color: inherit;
 }
 
@@ -371,10 +448,11 @@ ul{
 
 .featured-products{
     display: flex;
+    flex-wrap: wrap;
     max-width: 100%;
     padding: 0px 0px 0px;
     margin: 4px;
-    flex-basis: 25%; 
+    
 }
 
 .featured-products-2{
@@ -387,7 +465,7 @@ ul{
 }
 
 .row-10{
-    width: 100%;
+    width: 50%;
 }
 
 .col-9{
@@ -396,7 +474,7 @@ ul{
 
 .col-9 tr td{
   
-    min-width: 160px;
+    min-width: 60px;
     
     height: 40px;
     font-size: 26px;
